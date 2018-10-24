@@ -4,7 +4,7 @@ import time
 
 celery = Celery(__name__,
                 backend='rpc://',
-                broker="amqp://localhost"
+                broker="amqp://myuser:mypassword@acc17-qts.duckdns.org/myvhost"
 )
 
 @celery.task(name='app.tasks.say_hello')
